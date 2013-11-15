@@ -52,7 +52,7 @@ module.exports = function(grunt) {
     function compileHTML(filename, baseDir) {
 
       var htmlContent = escapeContent(fs.readFileSync(filename).toString(), "'");
-      htmlContent = stripBOM(htmlContent);
+      //htmlContent = stripBOM(htmlContent);
       // TODO: place a minification pipeline here if you want.
 
       var dirName;
