@@ -66,6 +66,7 @@ module.exports = function(grunt) {
       moduleName = moduleName.replace('services', 'service');
       moduleName = moduleName.replace('controllers', 'controller');
       moduleName = moduleName.replace('filters', 'filter');
+      moduleName = moduleName.replace('modals', 'modal');
 
       var ext = path.extname(filename);
       var extFreeName = path.basename(filename, ext).match(/^[a-zA-Z\-_]+/g)[0];
