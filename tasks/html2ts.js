@@ -11,6 +11,7 @@
 var fs = require('fs');
 var path = require('path');
 var _ = require('underscore');
+var minify = require('html-minifier').minify;
 
 module.exports = function(grunt) {
 
@@ -52,8 +53,9 @@ module.exports = function(grunt) {
     function compileHTML(filename, baseDir) {
 
       var htmlContent = escapeContent(fs.readFileSync(filename).toString(), "'");
-      //htmlContent = stripBOM(htmlContent);
-      // TODO: place a minification pipeline here if you want.
+      if(grunt.options('hmtlmin')) {
+          htmlContent = minify(htmlContent, grunt.options('hmtlmin'));
+      }
 
       var dirName;
       if(baseDir) {
