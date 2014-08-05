@@ -53,8 +53,13 @@ module.exports = function(grunt) {
     function compileHTML(filename, baseDir) {
 
       var htmlContent = escapeContent(fs.readFileSync(filename).toString(), "'");
+<<<<<<< HEAD
       if(grunt.option('hmtlmin')) {
           htmlContent = minify(htmlContent, grunt.option('hmtlmin'));
+=======
+      if(grunt.options('hmtlmin')) {
+          htmlContent = minify(htmlContent, grunt.options('hmtlmin'));
+>>>>>>> d98df4af9d635e65160ca4d27561ab8c431eb8e9
       }
 
       var dirName;
