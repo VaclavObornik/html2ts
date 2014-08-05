@@ -39,6 +39,7 @@
     "gruntplugin"
   ],
   "dependencies": {
+    "html-minifier": "^0.6.6",
     "underscore": "~1.5.2"
   }
 }
